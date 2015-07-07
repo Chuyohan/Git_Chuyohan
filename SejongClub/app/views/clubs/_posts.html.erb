@@ -1,0 +1,13 @@
+<% @posts.reverse.each do |post| %>
+	<div clss="row">
+		<div class="col-xs-6 col-md-4">
+			<div class ="thumbnail">
+				<img src ="Picture.png" alt="...">
+				<div class = "caption">
+					<h5><%= post.category%> 동아리</h5>
+					<p>...</p>
+					<p><a href="/clubs/detail_posts/<%= post.id %>" class="btn btn-primary" role="button"> 자세히 </a><a href="#" class="btn btn-default" role="button"> 즐겨찾기 </a></p>
+			</div>
+		</div>
+	</div>
+<% end %>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SejongClub</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		 	<div class = "container">
+		 		<li><h4><%= link_to "Sejong Club", '/', id: "logo"%></h4></li>
+		 		<li><%= render :partial => "clubs/search" %></li>
+		  	</div>
+			
+		  	<div class = "container">
+		  		<ul class="nav nav-tabs navbar-left">
+					<li><a href="/play">연극</a></li>
+					<li><a href="/culture">문화</a></li>
+					<li><a href="/sports">체육</a></li>
+					<li><a href="/study">학술</a></li>
+					<li><a href="/helper">봉사</a></li>
+					<li><a href="/religion">종교</a></li>
+				</ul>
+
+		  		<ul class="nav navbar-nav navbar-right">
+					<li><a href="/users/#">회원가입</a></li>
+					<li><a href="/users/#">로그인</a></li>
+				</ul>
+			</div>
+		</nav>
+	</nav>
+
+	<div class = "container">
+		<%= yield %>
+	</div>
+</body>
+</html>
