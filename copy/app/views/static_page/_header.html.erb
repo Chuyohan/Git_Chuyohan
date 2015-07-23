@@ -2,10 +2,11 @@
     <div class="container">
 		<% if current_user %>
 			<div class="nav navbar-left">
-			  <%= link_to "sejong university club", club_all_show_path , id: "logo" %>
+			  <%= link_to "sejong university club", all_show_path , id: "logo" %>
 			</div>
 
 			<div class="nav navbar-right" id ="right_top_user">
+			<%= link_to "Post", create_path, class: "btn btn-default" %>
 			<%= link_to current_user.name, "#", class: "btn btn-default" %>
 			<%= link_to "Sign out", signout_path, id: "sign_out", class: "btn btn-default" %>
 			</div>

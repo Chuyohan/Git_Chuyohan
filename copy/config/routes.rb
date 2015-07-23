@@ -11,11 +11,15 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
-  get 'club_all_show' => 'clubs#all_show'
-  get 'club_category_show' => 'clubs#category_show'
+  get 'all_show' => 'clubs#all_show'
+  get 'category_show' => 'clubs#category_show'
+  get 'create' => 'clubs#new'
+  get 'clubs/club_view'
+  get 'clubs/edit'
 
   resources :sessions, only: [:create, :destroy]
   resources :users
+  resources :clubs
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

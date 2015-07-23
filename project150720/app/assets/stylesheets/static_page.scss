@@ -13,6 +13,7 @@ body {
   }
   #login {
 	background-image: image-url('SejongUni2.jpg');
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
   }
 }
 .row {
@@ -134,7 +135,7 @@ body {
 	.thumbnail{
 		background-image: image-url('fatdog.JPG');
 		padding-top : 3cm;
-		padding-bottom: 3cm;
+		padding-bottom: 3cm;  
 	}
 }
 

@@ -1,0 +1,41 @@
+ <div class="row", id = "club_new">
+
+  <div class="col-md-6 col-md-offset-3">
+  <div id = "center">
+    <h3> Club Post Edit </h3>
+  </div>
+   <hr>
+    <%= form_for(@club) do |f| %>
+      <%= render 'shared/club_error_messages' %>
+
+      <%= f.label :name %>      
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :category %>
+      <%= f.text_field :category, class: 'form-control' %>
+
+      <%= f.label :intro %>
+      <%= f.text_field :intro, class: 'form-control' %>
+
+      <%= f.label :personnel %>
+      <%= f.text_field :personnel, class: 'form-control' %>
+
+      <%= f.label :location %>
+      <%= f.text_field :location, class: 'form-control' %>
+
+      <%= f.label :phone %>
+      <%= f.text_field :phone, class: 'form-control' %>
+
+      <%= f.label :history %>
+      <%= f.text_field :history, class: 'form-control' %>
+
+      <%= f.label :picture %>
+      <%= f.text_field :picture, class: 'form-control' %>
+
+      <div id = "center">
+        <br>
+        <%= f.submit "Save changes", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

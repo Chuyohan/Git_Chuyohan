@@ -13,6 +13,7 @@ body {
   }
   #login {
 	background-image: image-url('SejongUni2.jpg');
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
   }
 }
 .row {
@@ -138,3 +139,17 @@ body {
 	}
 }
 
+#public_cover {
+	margin-top: 100px;
+	margin-bottom: auto;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+#club_new {
+	margin-top: 50px;
+	margin-bottom: auto;
+	margin-right: auto;
+	margin-left: auto;
+}

@@ -7,13 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-categories = ["연극","종교","체육","컴공"]
+#categories = ["연극","종교","체육","컴공"]
 
-categories.each do |category|
-  0.upto(1) do |i|
-    c = Club.new
-    c.name = "미정"
-    c.category = category
-    c.save
-  end
-end
+#categories.each do |category|
+#  0.upto(1) do |i|
+#  c.name = "미정"
+#    c.category = category
+#    c.save
+#  end
+#end
