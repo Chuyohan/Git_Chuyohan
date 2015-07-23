@@ -1,0 +1,22 @@
+<% if logged_in? %>
+
+	<div class = "container-center" style="height:50px;">
+	<!--<div class = "container-center" style="height:42px;">-->
+		<div class="btn-group btn-group-justified" id = "category_bar">
+			<% if @club %>
+				<%= link_to "전체", clubs_path, class: "btn btn-primary disable" %>
+			<% else %>
+				<%= link_to "전 체", clubs_path, class: "btn btn-primary" %>
+			<% end %>
+
+			<a href="/play" class="btn btn-primary">연 극</a>
+			<a href="/culture" class="btn btn-primary">문 화</a>
+			<a href="/study" class="btn btn-primary">학 술</a>
+			<a href="/helper" class="btn btn-primary">봉 사</a>
+			<a href="/religion" class="btn btn-primary">종 교</a>
+	    </div>
+	</div>
+
+<% else %>
+
+<% end %>

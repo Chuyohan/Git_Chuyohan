@@ -1,0 +1,140 @@
+// Place all the styles related to the StaticPage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+body {
+  .jumbotron{  
+  height: 450px;
+  }
+  #login {
+	background-image: image-url('SejongUni2.jpg');
+  }
+}
+.row {
+	width: 1100px;
+	margin: auto;	
+}
+
+.center {
+  text-align: center;
+}
+
+#topheader{
+	height : 70px;
+	background-color : lightgray;
+	border-style:hidden;
+	line-height: 50px; 
+}
+
+#footer {
+	background-color : lightgray;
+	margin-top: 2cm;
+	height :50px;
+}
+
+
+
+#develop_intro{
+	text-align :center;
+	margin-top: 2cm;
+}
+
+
+#intro1 {
+	.circular{
+	width: 140px;
+	height: 140px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background-image: image-url('fatdog.JPG');
+	margin :auto;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+	.thumbnail{
+		background-color: lightgray;
+		padding-top : 1cm;
+		padding-bottom: 1cm;
+	}
+}
+
+#intro2 {
+	.circular{
+	width: 140px;
+	height: 140px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background-image: image-url('mentor.jpg');
+	margin :auto;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+	.thumbnail{
+		background-color: lightgray;
+		padding-top : 1cm;
+		padding-bottom: 1cm;
+	}
+}
+
+#intro3 {
+	.circular{
+	width: 140px;
+	height: 140px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background-image: image-url('mentee.jpg');
+	margin :auto;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+	.thumbnail{
+		background-color: lightgray;
+		padding-top : 1cm;
+		padding-bottom: 1cm;
+	}
+}
+
+
+#center {
+	text-align :center;
+}
+
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#right_top_user {
+	line-height: 70px;
+}
+
+#club_list_cover {
+	margin-top: 100px;
+	margin-bottom: auto;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	.thumbnail{
+		background-image: image-url('fatdog.JPG');
+		padding-top : 3cm;
+		padding-bottom: 3cm;
+	}
+}
+
