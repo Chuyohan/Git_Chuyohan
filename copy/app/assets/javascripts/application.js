@@ -14,5 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 
-
-
+$(document).ready(function(){
+    $(".thumbnail").fancybox(function(){
+    	'titlePosition' : 'inside'
+    });
+});

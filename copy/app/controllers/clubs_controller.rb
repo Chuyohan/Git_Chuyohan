@@ -26,9 +26,13 @@ class ClubsController < ApplicationController
   		render 'edit'
   	end
   end
+ 
+  def club_view
+  	@club = Club.find_by(params[:id])
+  end
 
   def all_show
-  	@clubs = Club.all.paginate(page: params[:page])
+  	@clubs = Club.all.paginate(page: params[:page], :per_page => 9)
   end
 
   def category_show

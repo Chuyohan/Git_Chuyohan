@@ -20,6 +20,13 @@ module SessionsHelper
     @current_user = nil
   end
 
+  def club_create(club)
+      session[:club_id] = club.id
+  end
+
+  def current_club
+    @current_club ||= Club.find(session[:club_id]) if session[:club_id]
+  end
 end
 
 

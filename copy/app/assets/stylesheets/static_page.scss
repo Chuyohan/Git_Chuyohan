@@ -34,7 +34,7 @@ body {
 
 #footer {
 	background-color : lightgray;
-	margin-top: 2cm;
+	margin-top: 1cm;
 	height :50px;
 }
 
@@ -126,6 +126,11 @@ body {
 	line-height: 70px;
 }
 
+#club_9_cut {
+	height: 820px;
+	width: 1170px;
+}
+
 #club_list_cover {
 	margin-top: 100px;
 	margin-bottom: auto;
@@ -133,7 +138,7 @@ body {
 	margin-left: auto;
 	text-align: center;
 	.thumbnail{
-		background-image: image-url('fatdog.JPG');
+		/*background-image: image-url('fatdog.JPG');*/
 		padding-top : 3cm;
 		padding-bottom: 3cm;
 	}
@@ -152,4 +157,12 @@ body {
 	margin-bottom: auto;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.fancybox-title-inside {
+	padding-bottom: 10px;
+	text-align: center;
+	color: #333;
+	background: #fff;
+	position: relative;
 }
