@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   get 'all_show' => 'clubs#all_show'
   get 'category_show' => 'clubs#category_show'
   get 'create' => 'clubs#new'
-  get 'clubs/club_view'
-  get 'clubs/edit'
+  get 'clubs/view/:id' => 'clubs#view'
+  get 'clubs/edit/:id' => 'clubs#edit'
+  get 'clubs/delete/:id' => 'clubs#delete'
 
   resources :sessions, only: [:create, :destroy]
   resources :users

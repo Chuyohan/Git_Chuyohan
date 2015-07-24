@@ -14,7 +14,7 @@ class ClubsController < ApplicationController
   end
 
   def edit
-  	@club = Club.find_by(params[:name])
+  	@club = Club.find(params[:id])
   end
 
   def update
@@ -27,8 +27,14 @@ class ClubsController < ApplicationController
   	end
   end
  
-  def club_view
-  	@club = Club.find_by(params[:id])
+  def view
+  	@club = Club.find(params[:id])
+  end 
+
+  def delete
+  	Club.find(params[:id]).destroy
+  	flash[:success] = "Club deleted"
+  	redirect_to all_show_path
   end
 
   def all_show
