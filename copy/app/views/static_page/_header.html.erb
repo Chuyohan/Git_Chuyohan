@@ -6,7 +6,9 @@
 			</div>
 
 			<div class="nav navbar-right" id ="right_top_user">
-			<%= link_to "Post", create_path, class: "btn btn-default" %>
+			<% if (user_admin?) %>
+				<%= link_to "Post", create_path, class: "btn btn-default" %>
+			<% end %>
 			<%= link_to current_user.name, "#", class: "btn btn-default" %>
 			<%= link_to "Sign out", signout_path, id: "sign_out", class: "btn btn-default" %>
 			</div>

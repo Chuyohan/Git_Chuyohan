@@ -6,7 +6,6 @@
 @import "bootstrap";
 
 /* universal */
-
 body {
   .jumbotron{  
   height: 450px;
@@ -19,6 +18,12 @@ body {
 .row {
 	width: 1100px;
 	margin: auto;	
+}
+
+#dropdownbtn {
+	position: relative;
+	left: 20px;
+	top: 20px;
 }
 
 .center {
@@ -55,8 +60,7 @@ body {
 	margin :auto;
 	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	}
-	.thumbnail{
-		background-color: lightgray;
+	.thumbnail{		
 		padding-top : 1cm;
 		padding-bottom: 1cm;
 	}
@@ -73,8 +77,7 @@ body {
 	margin :auto;
 	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	}
-	.thumbnail{
-		background-color: lightgray;
+	.thumbnail{		
 		padding-top : 1cm;
 		padding-bottom: 1cm;
 	}
@@ -92,7 +95,6 @@ body {
 	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	}
 	.thumbnail{
-		background-color: lightgray;
 		padding-top : 1cm;
 		padding-bottom: 1cm;
 	}

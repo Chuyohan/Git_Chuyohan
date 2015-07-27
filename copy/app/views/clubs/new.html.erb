@@ -5,7 +5,7 @@
     <h3> Club Post </h3>
   </div>
    <hr>
-    <%= form_for(@club) do |f| %>
+    <%= form_for(@club, html: { multipart: true }) do |f| %>
       <%= render 'shared/club_error_messages' %>
 
       <%= f.label :name %>      
@@ -30,7 +30,10 @@
       <%= f.text_field :history, class: 'form-control' %>
 
       <%= f.label :picture %>
-      <%= f.text_field :picture, class: 'form-control' %>
+
+      <span class="picture">
+        <%= f.file_field :picture %>
+      </span>
 
       <div id = "center">
         <br>

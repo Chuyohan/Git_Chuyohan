@@ -20,7 +20,7 @@ class ClubsController < ApplicationController
   def update
   	@club = Club.find_by(params[:name])
   	if @club.update_attributes(club_params)
-  		flash[:success] = "Club Post Eidt Success"
+  		flash.now[:success] = "Club Post Eidt Success"
   		redirect_to all_show_path
   	else
   		render 'edit'
@@ -42,11 +42,26 @@ class ClubsController < ApplicationController
   end
 
   def category_show
+	case params[:category]
+      when "play"
+        @category = "play"
+      when "culture"
+        @category = "culture"
+      when "sports"
+        @category = "sports"
+      when "study"
+        @category = "study"
+      when "helper"
+        @category = "helper"
+      when "religion"
+        @category = "religion"
+    end
+    @clubs = Club.where(category: @category).paginate(page: params[:page], per_page: 9)
   end
 
   private
+
     def club_params
       params.require(:club).permit(:name, :category, :intro, :location, :personnel, :history, :phone, :picture)
   	end
 end
-
