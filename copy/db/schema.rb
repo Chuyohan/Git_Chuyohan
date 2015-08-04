@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150724030511) do
+ActiveRecord::Schema.define(version: 20150729034233) do
+
+  create_table "albums", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "club_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.string   "name"
+    t.string   "category"
+    t.string   "picture"
+    t.text     "intro"
+    t.string   "location"
+    t.string   "personnel"
+    t.text     "history"
+    t.string   "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "clubs", force: :cascade do |t|
     t.string   "name"
@@ -24,6 +45,13 @@ ActiveRecord::Schema.define(version: 20150724030511) do
     t.string   "personnel"
     t.text     "history"
     t.string   "phone"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.integer  "club_id"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

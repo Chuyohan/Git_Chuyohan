@@ -1,0 +1,200 @@
+// Place all the styles related to the StaticPage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+body {
+  .jumbotron{  
+  height: 450px;
+  }
+  #login {
+	background-image: image-url('SejongUni2.jpg');
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  }
+}
+.row {
+	width: 1100px;
+	margin: auto;	
+}
+
+.center {
+  text-align: center;
+}
+
+#topheader{
+	height : 70px;
+	background-color : lightgray;
+	border-style:hidden;
+	line-height: 50px; 
+}
+
+#footer {
+	background-color : lightgray;
+	margin-top: 1cm;
+	height :50px;
+}
+
+#develop_intro{
+	text-align :center;
+	margin-top: 2cm;
+}
+
+
+#intro1 {
+	.circular{
+	width: 140px;
+	height: 140px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background-image: image-url('fatdog.JPG');
+	margin :auto;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+	.thumbnail{		
+		padding-top : 1cm;
+		padding-bottom: 1cm;
+	}
+}
+
+#intro2 {
+	.circular{
+	width: 140px;
+	height: 140px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background-image: image-url('mentor.jpg');
+	margin :auto;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+	.thumbnail{		
+		padding-top : 1cm;
+		padding-bottom: 1cm;
+	}
+}
+
+#intro3 {
+	.circular{
+	width: 140px;
+	height: 140px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background-image: image-url('mentee.jpg');
+	margin :auto;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+	.thumbnail{
+		padding-top : 1cm;
+		padding-bottom: 1cm;
+	}
+}
+
+#center {
+	text-align :center;
+}
+
+#paginate_center {
+	margin-top: 50px;
+	text-align :center;
+}
+
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#right_top_user {
+	line-height: 70px;
+}
+
+#club_9_cut {
+	height: 1240px;
+	width: 1140px;
+}
+
+#club_list_cover {
+	margin-top: 100px;
+	margin-bottom: auto;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+ul.pagination{
+	margin-top: 50px;
+}
+
+#public_cover {
+	margin-top: 100px;
+	margin-bottom: auto;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+#club_new {
+	margin-top: 50px;
+	margin-bottom: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#club_category {
+	width: 125px;
+	height: 32px;
+	margin-left: 5px;
+}
+
+#club_personnel {
+	width: 140px;
+	height: 32px;
+	margin-left: 10px;
+}
+
+#apply_form_margin {
+	margin-top : 13px;
+}
+
+#apply_form {
+    background-color : lightgray;
+    width: 750px;
+    height: 680px;
+}
+
+#club_thumb {
+	margin-top : 8px;
+	margin-bottom: 25px;
+	font-size: 23px;
+}
+
+#myCarousel {
+	width: 1140px;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a.left.carousel-control{
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.001) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}
+
+a.right.carousel-control{
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.001) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}	
+

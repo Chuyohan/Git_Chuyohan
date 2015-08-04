@@ -1,0 +1,42 @@
+<header id = "topheader">
+    <div class="container">
+		<% if current_user %>
+			<div class= "nav navbar-left">
+			  <%= link_to "sejong university club", all_show_path , id: "logo" %>
+			</div>
+
+			<div class= "nav navbar-right" id ="right_top_user">
+				
+			<% if (user_admin?) %>
+				<%= link_to "Post", create_path, class: "btn btn-default" %>
+			<% end %>
+
+			<div class="btn-group">
+			  <div class="btn btn-default">카테고리</div>
+			  <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+			  <ul class="dropdown-menu">
+			  	<li><%= link_to "전체", all_show_path %></li>
+			  	<li class="divider"></li>
+			  	<li><a href="/favorite"> 즐겨찾기 </a></li>
+			    <li class="divider"></li>
+			    <li><a href="/play"> 연 극 </a></li>
+			    <li><a href="/문화"> 문 화 </a></li>
+			    <li><a href="/체육"> 체 육 </a></li>
+			    <li><a href="/학술"> 학 술 </a></li>
+			    <li><a href="/봉사"> 봉 사 </a></li>
+			    <li><a href="/종교"> 종 교 </a></li>
+			  </ul>
+			</div>
+			<%= link_to current_user.name, "#", class: "btn btn-default" %>
+			<%= link_to "Sign out", signout_path, id: "sign_out", class: "btn btn-default" %>
+			</div>
+
+		<% else %>
+		
+			<div class="nav navbar-left">
+			  <%= link_to "sejong university club", root_path , id: "logo" %>
+			</div>
+
+		<% end %>
+	</div>
+</header>

@@ -1,0 +1,29 @@
+<div class = "container" id = "club_9_cut">
+<div id = "club_list_cover">
+		<% @clubs.reverse.each do |club| %>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<div >
+					<a href = "/clubs/view/<%= club.id %>" ><%= image_tag club.picture_url(:thumb) if club.picture? %>
+					</a>
+				</div>
+				
+				<div id = "club_thumb">
+					<%= club.name %>
+					<button type="button" class="btn btn-default btn-md" id='bookmark'>
+  					<span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+					</button>
+
+					<% if (user_admin?) %>
+					<a href = "/clubs/edit/<%= club.id %>" class = "btn btn-default"> Edit </a>
+					<a href = "/clubs/delete/<%= club.id %>" class = "btn btn-default"> Delete </a>
+					<% end %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+
+</div>
+
+<div id = "paginate_center">
+	<%= will_paginate @clubs, previous_label: "<<", next_label: ">>" %>
+</div>

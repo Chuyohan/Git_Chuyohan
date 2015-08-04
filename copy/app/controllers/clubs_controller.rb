@@ -7,6 +7,8 @@ class ClubsController < ApplicationController
     @club = Club.new(club_params)
     if @club.save
        flash.now[:success] = "Create the club!"
+       if params[:images]
+          params[:images]
       redirect_to all_show_path
     else
       render 'new'
@@ -18,7 +20,7 @@ class ClubsController < ApplicationController
   end
 
   def update
-  	@club = Club.find_by(params[:name])
+  	@club = Club.find(params[:id])
   	if @club.update_attributes(club_params)
   		flash.now[:success] = "Club Post Eidt Success"
   		redirect_to all_show_path
@@ -43,18 +45,18 @@ class ClubsController < ApplicationController
 
   def category_show
 	case params[:category]
-      when "play"
-        @category = "play"
-      when "culture"
-        @category = "culture"
-      when "sports"
-        @category = "sports"
-      when "study"
-        @category = "study"
-      when "helper"
-        @category = "helper"
-      when "religion"
-        @category = "religion"
+      when "연극"
+        @category = "연극"
+      when "문화"
+        @category = "문화"
+      when "체육"
+        @category = "체육"
+      when "학술"
+        @category = "학술"
+      when "봉사"
+        @category = "봉사"
+      when "종교"
+        @category = "종교"
     end
     @clubs = Club.where(category: @category).paginate(page: params[:page], per_page: 9)
   end

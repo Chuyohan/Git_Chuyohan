@@ -20,12 +20,6 @@ body {
 	margin: auto;	
 }
 
-#dropdownbtn {
-	position: relative;
-	left: 20px;
-	top: 20px;
-}
-
 .center {
   text-align: center;
 }
@@ -158,3 +152,46 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 }
+
+#club_category {
+	width: 125px;
+	height: 32px;
+	margin-left: 5px;
+}
+
+#club_personnel {
+	width: 140px;
+	height: 32px;
+	margin-left: 10px;
+}
+
+#apply_form_margin {
+	margin-top : 13px;
+}
+
+#apply_form {
+    background-color : lightgray;
+    width: 750px;
+    height: 650px;
+}
+
+#club_thumb {
+	margin-top : 8px;
+	margin-bottom: 25px;
+	font-size: 23px;
+}
+
+#myCarousel {
+	width: 1140px;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a.left.carousel-control{
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.001) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}
+
+a.right.carousel-control{
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.001) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}	

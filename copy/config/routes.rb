@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'photos/album_id:integer'
+
+  get 'photos/image:string'
+
+  get 'albums/create'
+
   root 'static_page#home'
-
   get    'signup'   => 'users#new'
-
   post   'login'    => 'sessions#create'
   delete 'logout'   => 'sessions#destroy'
 
@@ -22,6 +26,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   resources :users
   resources :clubs
+  resources :bookmarks
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

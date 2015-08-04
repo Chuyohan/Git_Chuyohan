@@ -1,8 +1,8 @@
  <div class="row", id = "club_new">
 
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3", >
   <div id = "center">
-    <h3> Club Post Edit </h3>
+    <h3> Club Post </h3>
   </div>
    <hr>
     <%= form_for(@club, html: { multipart: true }) do |f| %>
@@ -11,14 +11,21 @@
       <%= f.label :name %>      
       <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :category %>
-      <%= f.text_field :category, class: 'form-control' %>
+      <br>
+      <div class = "col-md-6" style = "padding-left: 0px; padding-right: 0px">
+        <%= f.label :category %>
+        <%= f.select :category, [['연극', '연극'], ['문화', '문화'], ['체육', '체육'], ['학술', '학술'], ['봉사', '봉사'], ['종교', '종교']] , class: 'form-control'%>
+      </div>
+
+      <div class = "col-md-6" style = "padding-left: 0px; padding-right: 0px">
+        <%= f.label :personnel %>
+        <%= f.select :personnel, [['1~10명', "1~10명"], ['11~20명', '11~20명'], ['20명 이상', '20명 이상']], class: 'form-control' %>
+      </div>
+
+      <br><br>
 
       <%= f.label :intro %>
       <%= f.text_field :intro, class: 'form-control' %>
-
-      <%= f.label :personnel %>
-      <%= f.text_field :personnel, class: 'form-control' %>
 
       <%= f.label :location %>
       <%= f.text_field :location, class: 'form-control' %>
@@ -37,7 +44,7 @@
 
       <div id = "center">
         <br>
-        <%= f.submit "Save changes", class: "btn btn-primary" %>
+        <%= f.submit "Create my account", class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>

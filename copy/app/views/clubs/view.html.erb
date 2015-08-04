@@ -12,34 +12,11 @@
 	  <div class="carousel-inner" role="listbox">
 	    <div class="item active">
 	      <!-- 나중에 이미지 대신 DB 넣어줄 곳-->
-	     
-	      <%= image_tag @club.picture.url %>
-
-	      <div class="container">
-	        <div class="carousel-caption">
-	        </div>
+	      <div id = "center">
+	      <%= image_tag @club.picture.url if @club.picture? %>
 	      </div>
 	    </div>
 
-
-	    <div class="item">
-	      <!-- 나중에 이미지 대신 DB 넣어줄 곳-->
-	      <%= image_tag("girl.jpg") %>
-	      <div class="container">
-	        <div class="carousel-caption">
-	        </div>
-	      </div>
-	    </div>
-
-
-	    <div class="item">
-	    	<!-- 나중에 이미지 대신 DB 넣어줄 곳-->
-	      <%= image_tag("landscape.jpg") %>
-	      <div class="container">
-	        <div class="carousel-caption">
-	        </div>
-	      </div>
-	    </div>
 	  </div>
 
 
@@ -54,11 +31,22 @@
 	</div>
 </div>
 
+<br>
 
-<div class = "container" id = "club_view">
-	<div class="jumbotron">
-		
-	    <p><a href= "#" class="btn btn-primary btn-lg">지 원</a></p>
-	</div>
-</div>
-
+<h2> <%= @club.name %> 동아리 </h2>
+<blockquote class="pull-left">
+  <p> 소 개 </p>
+  <small> <%= @club.intro %> </small>
+  <br>
+  <p> 인 원 </p>
+  <small> <%= @club.personnel %> </small>
+  <br>
+  <p> 위 치 </p>
+  <small> <%= @club.location %> </small>
+  <br>
+  <p> 이 력 </p>
+  <small> <%= @club.history %> </small>
+  <br>
+  <p> 연락처 </p>
+  <small> <%= @club.phone %> </small>
+</blockquote>

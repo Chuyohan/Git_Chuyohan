@@ -1,0 +1,64 @@
+<div class = "container">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	  
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    
+	    <% @albums.each do |i| %>
+	    	<li data-target="#myCarousel" data-slide-to= "#{i}"></li>
+	    <% end %>
+	  </ol>
+
+
+	  <div class="carousel-inner" role="listbox">
+	    <div class="item active">
+	      <!-- 나중에 이미지 대신 DB 넣어줄 곳-->
+		    <div id = "center">
+		    	<%= image_tag @club.picture.url if @club.picture? %>
+		    </div>
+	    </div>
+		
+		<% @albums.each do |i| %>
+		    <div class = "item">
+		    	<div id = "center">
+			    
+					<%= image_tag i.image_url, :size => "750x500" %>
+				
+				</div>
+			</div>
+		<% end %>
+	  </div>
+
+
+	  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+</div>
+
+<br>
+
+<h2> <%= @club.name %> 동아리 <button type="button" class="btn btn-default btn-md" id='bookmark'>
+  	<span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
+</button> <%= render 'follow_form' if logged_in? %>
+ </h2> 
+
+
+<blockquote class="pull-left">
+  <p> 소 개 </p>
+  <small> <%= @club.intro %> </small>
+  <p> 인 원 </p>
+  <small> <%= @club.personnel %> </small>
+  <p> 위 치 </p>
+  <small> <%= @club.location %> </small>
+  <p> 이 력 </p>
+  <small> <%= @club.history %> </small>
+  <p> 연락처 </p>
+  <small> <%= @club.phone %> </small>
+</blockquote>
